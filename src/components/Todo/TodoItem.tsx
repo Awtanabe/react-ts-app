@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { classBody } from '@babel/types';
 
 type TodoItemProps = {
   id: number
@@ -10,7 +11,7 @@ type Todo = {
 }
 
 const TodoItem: React.FC<TodoItemProps> = (props) => {
-  return(<div>{props.body}</div>)
+  return(<div key={props.id}>{props.body}</div>)
 }
 
 export default TodoItem

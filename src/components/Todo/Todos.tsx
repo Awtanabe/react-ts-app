@@ -18,7 +18,7 @@ class Todos extends React.Component<TodosProps,{}> {
   render() {
     return (
       <div className="Todos">
-      {this.props.todos.map(todo => <TodoItem {...todo} />)}
+        {this.props.todos.map(todo => <TodoItem {...todo} />)}
       </div>
     );
   }
