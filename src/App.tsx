@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Todos from './components/Todo/Todos'
 
-function App() {
+
+
+
+type Todo = {
+ id:number
+ body: string
+}
+
+function App () {
+  const todos: Todo[] = [{id:1, body: "todo1"},{id:2, body: "todo2"}]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui main">
+      <Todos todos={todos}/>
     </div>
   );
 }
